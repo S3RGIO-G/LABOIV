@@ -1,0 +1,16 @@
+<ng-container>
+  <h1>{{title}}</h1>
+  <span>EDAD UNO </span>
+  <input type="text" [(ngModel)]="edadUno" (focus)="resetValues()">
+  <br>
+  <br>
+  <span>EDAD DOS </span>
+  <input type="text" [(ngModel)]="edadDos" (focus)="resetValues()">
+  <br>
+  <br>
+  <button (click)="calcularPromedio()">CALCULAR</button>
+  <br>
+  <h3 *ngIf="promedioEdad !== 0">PROMEDIO : {{promedioEdad}}</h3>
+  <h3 *ngIf="sumaEdades !== 0">SUMA DE LAS EDADES : {{sumaEdades}}</h3>
+  <h3 *ngIf="errorMessage !== null">{{errorMessage}}</h3>
+</ng-container>
